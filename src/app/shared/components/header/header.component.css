@@ -4,5 +4,17 @@ nav > a {
 }
 
 .active {
-    color: blue;
+    color: rgb(3, 3, 5);
+}
+
+.header-row {
+    width: 100%;
+}
+
+.nav-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }

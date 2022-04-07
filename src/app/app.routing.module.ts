@@ -25,15 +25,22 @@ const routes: Routes = [
             },
             {
                 path: 'contact',
-                canActivate: [AdminGuard],
                 loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
             },
+            {
+                path: 'order',
+                loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
+            }
         ]
+    },
+    {
+        path: 'admin',
+        loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
     },
     {   
         path: '**',
         loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
-    }
+    }, 
 ];
 
 @NgModule ({
